@@ -17,7 +17,7 @@ describe('testando função multiplicar', () => {
     })
      it('multiplicar um numero com zero', () => {
         const resultado = ServiceCalculadora.Multiplicar(1, 0)
-        expect(resultado).toBe(1);
+        expect(resultado).toBe(0);
     })
      it('multiplicar zero com um numero', () => {
         const resultado = ServiceCalculadora.Multiplicar(0, 2)

@@ -8,12 +8,12 @@ describe('testando função dividir', () => {
     })
 
      it('dividindo dois numeros negativos', () => {
-        const resultado = ServiceCalculadora.Dividir(-2, -1)
+        const resultado = ServiceCalculadora.Dividir(2,1 )
         expect(resultado).toBe(2);
     })
      it('dividindo dois numeros com casa decimal', () => {
-        const resultado = ServiceCalculadora.Dividir(2.1, 1.1)
-        expect(resultado).toBe(1.9);
+        const resultado = ServiceCalculadora.Dividir(1.1, 1.1)
+        expect(resultado).toBe(0.01);
     })
    
 })

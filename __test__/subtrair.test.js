@@ -21,7 +21,7 @@ describe('testando função sub', () => {
         expect(resultado).toBe(1);
     })
      it('subtraindo zero com um numero', () => {
-        const resultado = ServiceCalculadora.Sub(0, 2)
+        const resultado = ServiceCalculadora.Sub(2, 0)
         expect(resultado).toBe(2);
     })
 })

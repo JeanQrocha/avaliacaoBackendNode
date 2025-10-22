@@ -58,10 +58,10 @@ class ControllerCalculadora {
 
     calculadoraPotencia(req, res) {
         try {
-            const {num1, num2} = req.body
+            const {num} = req.body
 
 
-            const result = ServiceCalculadora.Potencia(num1, num2);
+            const result = ServiceCalculadora.Potencia(num);
 
             res.status(200).send({ data: { result } })
 
@@ -70,6 +70,31 @@ class ControllerCalculadora {
         }
     }
 
+    calculadoraRaiz(req, res) {
+        try {
+            const {num} = req.body
+
+
+            const result = ServiceCalculadora.Raiz(num);
+
+            res.status(200).send({ data: { result } })
+
+        } catch (error) {
+            res.status(400).send({ msg: error.message });
+        }
+    }
+
+    operacoes(_, res) {
+        try {
+          
+            const op = ServiceCalculadora.operacoes()
+
+            res.status(200).send({ data: { op } })
+
+        } catch (error) {
+            res.status(400).send({ msg: error.message });
+        }
+    }
 
 
 }
